@@ -1,4 +1,3 @@
-// https://vulkan-tutorial.com/Development_environment
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -8,6 +7,8 @@
 #include <glm/vec4.hpp>
 
 #include <iostream>
+
+#include "test.h"
 
 int main() {
     glfwInit();
@@ -22,7 +23,6 @@ int main() {
 
     glm::mat4 matrix;
     glm::vec4 vec;
-    auto test = matrix * vec;
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -31,6 +31,5 @@ int main() {
     glfwDestroyWindow(window);
 
     glfwTerminate();
-
     return 0;
 }
